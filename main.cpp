@@ -58,4 +58,8 @@ TEST(test_power, check_when_base_is_1)
     ASSERT_EQ(ret, 1U);
 }
 
-// Dummy Comment
+TEST(test_power, check_when_base_exponent_are_not_0_or_1)
+{
+    unsigned int long ret = custom::math::power<5U, 3U>::value;
+    ASSERT_EQ(ret, 125U);
+}
