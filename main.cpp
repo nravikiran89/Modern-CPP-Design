@@ -16,9 +16,14 @@
 #include "frame/custom_assert.hpp"
 #include "frame/typelists.hpp"
 
+#include "gtest/gtest.h"
 
-int main()
+TEST(test_factorial, test_Case_001)
 {
-    std::cout << "Running tests" << std::endl;
-    STATIC_CHECK(2==2);
+    ASSERT_EQ(factorial<4>::value, 4U*3U*2U*1U);
 }
+
+TEST(test_factorial, test_Case_002)
+{
+    ASSERT_EQ(factorial<5>::value, 4U*3U*2U*1U);
+} 
