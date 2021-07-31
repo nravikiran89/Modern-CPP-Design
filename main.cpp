@@ -5,19 +5,9 @@
 #include "frame/custom_assert.hpp"
 #include "frame/typelists.hpp"
 
+#include "gtest/gtest.h"
 
-typedef Typelist<char, Typelist <signed char, unsigned char> > CharList;
-
-int main() {
-
-    std::cout << power<11U, 2U>::value << std::endl;
-    std::cout << factorial<11U>::value << std::endl;
-
-    // CompileTimeError< (7 == 5) >();
-    CompileTimeError< (7 == 7) >();
-
-    // STATIC_CHECK(7 == 5);
-    STATIC_CHECK(7 == 7);
-
-    return 0;
+TEST(test_factorial, test_Case_001)
+{
+    ASSERT_EQ(factorial<4>::value, 4U*3U*2U*1U);
 }
