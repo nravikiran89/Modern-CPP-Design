@@ -19,5 +19,6 @@
 
 int main()
 {
+    std::cout << "Running tests" << std::endl;
     STATIC_CHECK(2==2);
 }
