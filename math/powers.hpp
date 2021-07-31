@@ -1,3 +1,14 @@
+/**
+ * @file powers.hpp
+ * @author Ravi Kiran Nagaraj (ravikiran89@outlook.com)
+ * @brief Compile time define to compute integral powers of an integer
+ * @version 0.1
+ * @date 2021-07-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #ifndef __MATH_POWERS_HPP__
 #define __MATH_POWERS_HPP__
 

@@ -1,3 +1,14 @@
+/**
+ * @file factorials.hpp
+ * @author Ravi Kiran Nagaraj (ravikiran89@outlook.com)
+ * @brief Compile time define to compute factorials
+ * @version 0.1
+ * @date 2021-07-31
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
 #ifndef __FACTORIALS_HPP__
 #define __FACTORIALS_HPP__
 

@@ -1,7 +1,7 @@
 /**
  * @file typelists.hpp
  * @author Ravi Kiran Nagaraj (ravikiran89@outlook.com)
- * @brief 
+ * @brief Define a typelist data structure
  * @version 0.1
  * @date 2021-07-31
  * 
@@ -13,6 +13,12 @@
 #ifndef __TYPELISTS_HPP__
 #define __TYPELISTS_HPP__
 
+/**
+ * @brief Base structure to define Typelists
+ * 
+ * @tparam H Head of the Typelist
+ * @tparam T Tail of the Typelist
+ */
 template <typename H, typename T>
 struct Typelist
 {
