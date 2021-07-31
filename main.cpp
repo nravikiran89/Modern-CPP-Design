@@ -25,5 +25,5 @@ TEST(test_factorial, test_Case_001)
 
 TEST(test_factorial, test_Case_002)
 {
-    ASSERT_EQ(factorial<5>::value, 4U*3U*2U*1U);
+    ASSERT_EQ(factorial<5>::value, 5U*4U*3U*2U*1U);
 } 
