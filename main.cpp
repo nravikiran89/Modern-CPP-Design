@@ -18,12 +18,42 @@
 
 #include "gtest/gtest.h"
 
-TEST(test_factorial, test_Case_001)
+
+TEST(test_factorial, check_when_0)
 {
-    ASSERT_EQ(factorial<4>::value, 4U*3U*2U*1U);
+    ASSERT_EQ(factorial<0>::value, 1U);
 }
 
-TEST(test_factorial, test_Case_002)
+TEST(test_factorial, check_when_1)
+{
+    ASSERT_EQ(factorial<1>::value, 1U);
+} 
+
+TEST(test_factorial, check_when_other_unsigned_Value)
 {
     ASSERT_EQ(factorial<5>::value, 5U*4U*3U*2U*1U);
 } 
+
+TEST(test_power, check_when_exponent_is_0)
+{
+    unsigned int long ret = custom::math::power<4U, 0U>::value;
+    ASSERT_EQ(ret, 1U);
+}
+
+TEST(test_power, check_when_exponent_is_1)
+{
+    unsigned int long ret = custom::math::power<4U, 1U>::value;
+    ASSERT_EQ(ret, 4U);
+}
+
+TEST(test_power, check_when_base_is_0)
+{
+    unsigned int long ret = custom::math::power<0U, 5U>::value;
+    ASSERT_EQ(ret, 1U);
+}
+
+TEST(test_power, check_when_base_is_1)
+{
+    unsigned int long ret = custom::math::power<1U, 5U>::value;
+    ASSERT_EQ(ret, 1U);
+}
