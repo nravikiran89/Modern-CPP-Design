@@ -57,3 +57,5 @@ TEST(test_power, check_when_base_is_1)
     unsigned int long ret = custom::math::power<1U, 5U>::value;
     ASSERT_EQ(ret, 1U);
 }
+
+// Branch safety check
