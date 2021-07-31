@@ -11,4 +11,4 @@ set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
 
 add_executable(templates_test main.cpp)
-arget_link_libraries(templates_test gtest gtest_main pthread)
+target_link_libraries(templates_test gtest gtest_main pthread)
