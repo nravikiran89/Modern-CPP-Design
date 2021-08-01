@@ -10,6 +10,7 @@
  */
 
 #include <iostream>
+#include <numeric>
 
 #include "math/powers.hpp"
 #include "math/factorials.hpp"
@@ -76,3 +77,24 @@ TEST(test_typelist_length, check_when_typelist_has_multiple_types)
 
     ASSERT_EQ(tl::length::Length<types>::value, 3);
 }
+
+TEST(test_typelist_TypeAt, check_type_at_0)
+{
+    typedef TYPELIST_3(char, int, float) types;
+
+    tl::index::TypeAt<types, 0>::RESULT var;
+    var = std::numeric_limits<tl::index::TypeAt<types, 0>::RESULT>::max();
+
+    ASSERT_EQ(var, std::numeric_limits<char>::max());
+}
+
+TEST(test_typelist_TypeAt, check_type_at_1)
+{
+    typedef TYPELIST_3(char, int, float) types;
+
+    tl::index::TypeAt<types, 1>::RESULT var;
+    var = std::numeric_limits<tl::index::TypeAt<types, 1>::RESULT>::max();
+
+    ASSERT_EQ(var, std::numeric_limits<int>::max());
+}
+
