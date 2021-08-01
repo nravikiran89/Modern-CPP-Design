@@ -76,6 +76,25 @@ namespace tl
             enum { value = 1 + Length<T>::value };
         };
     }
+
+    namespace index
+    {
+        //template<typename H, typename T> struct TypeAt;
+
+        template<typename TYPELIST, unsigned int INDEX> struct TypeAt;
+
+        template<typename H, typename T, unsigned int INDEX>
+        struct TypeAt<Typelist<H, T>, INDEX >
+        {
+            typedef typename TypeAt<T, INDEX - 1>::RESULT RESULT;
+        };
+
+        template<typename H, typename T>
+        struct TypeAt<Typelist<H, T>, 0 >
+        {
+            typedef H RESULT;
+        };
+    }
 }
 
 #endif /* __TYPELISTS_HPP__ */
