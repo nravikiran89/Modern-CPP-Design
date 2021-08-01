@@ -18,7 +18,6 @@
 
 #include "gtest/gtest.h"
 
-
 TEST(test_factorial, check_when_0)
 {
     ASSERT_EQ(factorial<0>::value, 1U);
@@ -62,4 +61,18 @@ TEST(test_power, check_when_base_exponent_are_not_0_or_1)
 {
     unsigned int long ret = custom::math::power<5U, 3U>::value;
     ASSERT_EQ(ret, 125U);
+}
+
+TEST(test_typelist_length, check_when_typelist_has_only_NullType)
+{
+    typedef Typelist<NullType, NullType> types;
+
+    ASSERT_NE(tl::length::Length<types>::value, 0);
+}
+
+TEST(test_typelist_length, check_when_typelist_has_multiple_types)
+{
+    typedef TYPELIST_3(char, int, float) types;
+
+    ASSERT_EQ(tl::length::Length<types>::value, 3);
 }
